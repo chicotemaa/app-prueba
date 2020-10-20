@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Vue</title>
+</head>
+<body>
+    <div id="app">
+        <button  v-on:click="changeVisibility" type="submit">Mostrar/Ocultar</button>
+        <ul v-if="mostrar">
+            <app-peliculas v-for="(Pelicula, index) in Peliculas" :key="index" :name="Pelicula.name"></app-peliculas>
+        </ul>
+        <h1 v-else="mostrar">no disponible</h1>
+    </div>
+
+    
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="./app.js">
+</script>
+
+</body>
+</html>
